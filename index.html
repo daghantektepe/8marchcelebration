@@ -64,7 +64,6 @@
 <body class="min-h-screen flex items-center justify-center p-4 sm:p-8">
 
     <!-- KARTIN ANA ÇERÇEVESİ (PERSPEKTİF ALANI) -->
-    <!-- Tıklanınca kartı çeviren fonksiyonu buraya ekledik -->
     <div class="perspective-1000 w-full max-w-2xl cursor-pointer group" onclick="kartCevir()">
         
         <!-- DÖNEN İÇ KISIM -->
@@ -72,32 +71,28 @@
             
             <!-- ====== KARTIN ÖN YÜZÜ (KAPALI HALİ) ====== -->
             <div class="absolute inset-0 backface-hidden bg-white rounded-[2.5rem] shadow-2xl border-4 border-pink-50 flex flex-col items-center justify-center p-8 text-center z-20">
-                <!-- Hafif renkli ve artık hareket eden arka plan efekti -->
+                
                 <div class="absolute top-0 left-0 w-full h-full overflow-hidden rounded-[2.5rem] z-0 opacity-40">
                     <div class="absolute -top-24 -left-24 w-64 h-64 bg-pink-200 rounded-full mix-blend-multiply filter blur-2xl ucusan-cicek"></div>
                     <div class="absolute -bottom-24 -right-24 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl ucusan-cicek-2"></div>
                 </div>
 
-                <!-- Ön yüz için uçuşan minik ışıltılar -->
                 <div class="absolute top-12 left-12 text-yellow-400 ucusan-cicek text-2xl opacity-60">✨</div>
                 <div class="absolute bottom-16 right-12 text-purple-400 ucusan-cicek-2 text-3xl opacity-50">✦</div>
                 <div class="absolute top-1/3 right-8 text-pink-300 animate-pulse text-xl opacity-70">★</div>
                 <div class="absolute bottom-1/4 left-10 text-indigo-300 animate-bounce text-lg opacity-60">✨</div>
 
                 <div class="relative z-10 flex flex-col items-center">
-                    <!-- Zarif bir ikon (Kalp) - 8 Mart Moru rengine çevrildi ve parlama eklendi -->
                     <div class="mb-6 text-purple-600 kalp-parilti">
                         <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                         </svg>
                     </div>
                     
-                    <!-- Janjanlı renk değiştiren yazı -->
                     <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-500 animate-shine mb-2 leading-tight py-2">
                         We have a special <br> message for you.
                     </h1>
                     
-                    <!-- Biraz daha buton hissi veren soluk yönlendirme yazısı -->
                     <p class="text-gray-400 mt-8 animate-pulse text-lg tracking-wide bg-gray-50 px-6 py-2 rounded-full border border-gray-100 shadow-sm">
                         (Click to open)
                     </p>
@@ -107,25 +102,22 @@
             <!-- ====== KARTIN ARKA YÜZÜ (İÇERİK - AÇILMIŞ HALİ) ====== -->
             <div class="relative w-full backface-hidden rotate-y-180 bg-white rounded-[2.5rem] shadow-2xl border-4 border-pink-50 overflow-hidden z-10">
                 
-                <!-- Arka plandaki renkli dekoratif şekiller -->
                 <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
                     <div class="absolute -top-24 -left-24 w-64 h-64 bg-pink-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
                     <div class="absolute top-1/2 -right-24 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
                     <div class="absolute -bottom-24 left-1/4 w-80 h-80 bg-yellow-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
                 </div>
 
-                <!-- İÇERİK -->
                 <div class="relative z-10 p-8 sm:p-12 flex flex-col items-center text-center">
                     
                     <!-- LOGO ALANI -->
-                    <img src="image_412c3d.png" alt="P.I. Works Logo" class="h-20 mb-8 object-contain">
+                    <img src="image_412c3d.png" alt="P.I. Works Logo" class="h-20 mb-6 object-contain">
 
-                    <!-- Eğlenceli Çiçek / Yıldız Süslemeleri -->
-                    <div class="flex justify-center items-center gap-6 mb-4">
+                    <div class="flex justify-center items-center gap-6 mb-2">
                         <svg class="w-10 h-10 text-pink-400 ucusan-cicek" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2C9.5 2 8 4.5 8 7c0 .5.1 1 .2 1.5-1.5-.2-3-.1-4.2.8-2 1.5-2 4.5 0 6.5.8.8 2 1.2 3.2 1.2-.2.5-.2 1.2-.2 1.8 0 2.5 2.5 4 5 4s4-1.5 4-4c0-.6-.1-1.3-.2-1.8 1.2 0 2.4-.4 3.2-1.2 2-2 2-5 0-6.5-1.2-.9-2.7-1-4.2-.8.1-.5.2-1 .2-1.5 0-2.5-1.5-5-4-5z"/>
                         </svg>
-                        <div class="text-5xl sm:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 tracking-tight pb-2">
+                        <div class="text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 tracking-tight pb-1">
                             March 8
                         </div>
                         <svg class="w-8 h-8 text-yellow-400 ucusan-cicek-2" fill="currentColor" viewBox="0 0 24 24">
@@ -133,26 +125,25 @@
                         </svg>
                     </div>
 
-                    <h1 class="text-3xl sm:text-4xl text-gray-800 font-semibold mb-8">
+                    <!-- BURADAKİ BOŞLUĞU AZALTTIK (mb-8 yerine mb-3) -->
+                    <h1 class="text-3xl sm:text-4xl text-gray-800 font-semibold mb-3">
                         Happy International <br>
-                        <span class="el-yazisi text-5xl text-pink-500 mt-2 block">Women's Day!</span>
+                        <span class="el-yazisi text-5xl text-pink-500 mt-0 block">Women's Day!</span>
                     </h1>
 
-                    <!-- KONFETİ VE SÜRPRİZ BUTONU -->
-                    <div id="buton-alani" class="mb-8 z-20 relative">
-                        <!-- Tıklandığında kartın geri dönmesini engellemek için event yolluyoruz -->
+                    <!-- BUTON BOŞLUĞUNU AZALTTIK (mb-8 yerine mb-4) -->
+                    <div id="buton-alani" class="mb-4 mt-2 z-20 relative">
                         <button onclick="surpriziAc(event)" class="animate-bounce inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full font-bold shadow-lg hover:scale-110 hover:shadow-pink-300/50 transition-all duration-300 transform cursor-pointer">
                             <span>🎉 Click for a Surprise!</span>
                         </button>
                     </div>
 
-                    <!-- SAMİMİ MESAJ (Başlangıçta "hidden" class'ı ile gizli duruyor) -->
-                    <div id="guzel-mesaj" class="hidden bg-white/60 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-sm border border-white/50 relative">
-                        <!-- Dekoratif Tırnak İşareti -->
+                    <!-- MESAJ KUTUSUNUN İÇ BOŞLUKLARINI BİRAZ KISTIK (px-6 py-5) -->
+                    <div id="guzel-mesaj" class="hidden bg-white/60 backdrop-blur-sm rounded-2xl px-6 py-5 sm:px-8 sm:py-6 shadow-sm border border-white/50 relative">
                         <span class="absolute -top-4 -left-2 text-6xl text-purple-200 font-serif leading-none opacity-80">"</span>
                         
-                        <!-- Hitap ettiğimizi belirten zarif bir kalp ikonu -->
-                        <div class="flex justify-center mb-4">
+                        <!-- KALP İKONU İLE YAZILAR ARASINDAKİ BOŞLUK (mb-4 yerine mb-2) -->
+                        <div class="flex justify-center mb-2">
                             <svg class="w-10 h-10 text-pink-500 opacity-80" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                             </svg>
@@ -161,16 +152,14 @@
                         <p class="text-gray-700 text-lg sm:text-xl leading-relaxed">
                             To all the amazing women who make P.I. Works stronger, more creative, and more beautiful... 
                         </p>
-                        <p class="text-gray-700 text-lg sm:text-xl leading-relaxed mt-4 font-medium text-purple-900">
+                        <p class="text-gray-700 text-lg sm:text-xl leading-relaxed mt-3 font-medium text-purple-900">
                             Your energy, vision, and dedication inspire us every single day. Here’s to achieving many more milestones together, we are glad to have you!
                         </p>
                     </div>
 
-                    <!-- ALT BİLGİ / GÖNDEREN -->
-                    <div class="mt-10 pt-6 border-t border-gray-100 w-full flex flex-col items-center">
-                        <!-- Kadınlar günü moru tonunu ekledik -->
-                        <p class="text-4xl text-purple-600 el-yazisi mb-1">With Love,</p>
-                        <!-- Family kaldırıldı, sadece P.I. Works -->
+                    <!-- ALT BİLGİ BOŞLUKLARINI AZALTTIK (mt-10 pt-6 yerine mt-5 pt-4) -->
+                    <div class="mt-5 pt-4 border-t border-gray-100 w-full flex flex-col items-center">
+                        <p class="text-4xl text-purple-600 el-yazisi mb-0">With Love,</p>
                         <p class="text-xl text-gray-800 font-bold mt-1">P.I. Works</p>
                     </div>
 
@@ -180,19 +169,13 @@
     </div>
 
     <script>
-        // Kartı tersine veya düzüne çeviren fonksiyon
         function kartCevir() {
             const cardInner = document.getElementById('card-inner');
-            // rotate-y-180 class'ını ekleyip çıkararak kartı döndürüyoruz
             cardInner.classList.toggle('rotate-y-180');
         }
 
-        // Sürpriz butonuna basıldığında çalışan fonksiyon
         function surpriziAc(event) {
-            // ÖNEMLİ: Butona tıklandığında arka plandaki kartın çevrilme (kapanma) olayını durdurur.
             event.stopPropagation();
-
-            // 1. Önce konfetileri patlatıyoruz
             confetti({
                 particleCount: 150,
                 spread: 80,
@@ -200,12 +183,10 @@
                 colors: ['#ff69b4', '#8a2be2', '#ffd700', '#00bfff']
             });
 
-            // 2. Gizli mesajımızı güzel bir animasyonla görünür yapıyoruz
             const mesajKutusu = document.getElementById('guzel-mesaj');
             mesajKutusu.classList.remove('hidden');
             mesajKutusu.classList.add('mesaj-goster');
 
-            // 3. Sürpriz butonunu artık işi bittiği için ekrandan kaldırıyoruz
             document.getElementById('buton-alani').style.display = 'none';
         }
     </script>
